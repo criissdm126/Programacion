@@ -1,0 +1,5 @@
+Cliente: Nombre: Cliente 1, Edad: 30, Producto: Producto: Producto 1, Precio: 10.99, Proveedor: Nombre: Proveedor 1, Edad: 45
+Cliente: Nombre: Cliente 2, Edad: 25, Producto: Producto: Producto 2, Precio: 15.99, Proveedor: Nombre: Proveedor 2, Edad: 50
+Cliente: Nombre: Cliente 3, Edad: 40, Producto: Producto: Producto 3, Precio: 7.99, Proveedor: Nombre: Proveedor 3, Edad: 55
+Cliente: Nombre: Cliente 4, Edad: 35, Producto: Producto: Producto 4, Precio: 12.99, Proveedor: Nombre: Proveedor 4, Edad: 48
+Cliente: Nombre: Cliente 5, Edad: 28, Producto: Producto: Producto 5, Precio: 9.99, Proveedor: Nombre: Proveedor 5, Edad: 52

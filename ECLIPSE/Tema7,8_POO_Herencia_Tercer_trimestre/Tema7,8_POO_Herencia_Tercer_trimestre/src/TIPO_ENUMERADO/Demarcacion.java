@@ -1,0 +1,6 @@
+package TIPO_ENUMERADO;
+
+public enum Demarcacion {
+ 
+	PORTERO, DEFENSA, CENTROCAMPISTA, DELANTERO
+}

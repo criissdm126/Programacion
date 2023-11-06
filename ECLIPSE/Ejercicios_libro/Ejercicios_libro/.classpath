@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Colecciones"/>
+	<classpathentry kind="src" path="Ficheros_Texto"/>
+	<classpathentry kind="src" path="Ficheros_Binarios"/>
+	<classpathentry kind="src" path="POO"/>
+	<classpathentry kind="src" path="BBDD"/>
+	<classpathentry kind="src" path="BUCLES"/>
+	<classpathentry kind="src" path="CONDICIONALES"/>
+	<classpathentry kind="src" path="Arrays_Metodos"/>
+	<classpathentry kind="src" path="Repaso"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-18">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/familia/Downloads/bbdd/mysql-connector-java-8.0.23.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

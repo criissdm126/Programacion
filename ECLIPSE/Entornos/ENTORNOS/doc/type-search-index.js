@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"Conversor2","l":"Binario"},{"p":"Conversor2","l":"Principal"}];updateSearchResults();

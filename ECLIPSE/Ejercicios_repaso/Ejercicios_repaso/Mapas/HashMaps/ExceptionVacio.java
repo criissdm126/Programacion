@@ -1,0 +1,8 @@
+package HashMaps;
+
+class ExceptionVacio extends Exception {
+    
+	public ExceptionVacio(String message) {
+        super(message);
+    }
+}

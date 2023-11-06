@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Tema_3"/>
+	<classpathentry kind="src" path="POO"/>
+	<classpathentry kind="src" path="Java_basico"/>
+	<classpathentry kind="src" path="Libro"/>
+	<classpathentry kind="src" path="Repaso_POO"/>
+	<classpathentry kind="src" path="Tema_4"/>
+	<classpathentry kind="src" path="Repaso_Trimestre_1"/>
+	<classpathentry kind="src" path="Ficheros"/>
+	<classpathentry kind="src" path="Excepciones"/>
+	<classpathentry kind="src" path="Mapas"/>
+	<classpathentry kind="src" path="Listas"/>
+	<classpathentry kind="src" path="Set"/>
+	<classpathentry kind="src" path="Colas"/>
+	<classpathentry kind="src" path="Base_Datos"/>
+	<classpathentry kind="src" path="General"/>
+	<classpathentry kind="src" path="Colecciones"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-18">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/familia/Downloads/bbdd/mysql-connector-java-8.0.23.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

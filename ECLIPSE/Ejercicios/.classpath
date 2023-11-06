@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-18">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="Clase_abstracta"/>
+	<classpathentry kind="src" path="devuelve"/>
+	<classpathentry kind="src" path="Examen_enero_1"/>
+	<classpathentry kind="src" path="Que_devuelve"/>
+	<classpathentry kind="src" path="Tema_3"/>
+	<classpathentry kind="src" path="Tema_4"/>
+	<classpathentry kind="src" path="Wrappers"/>
+	<classpathentry kind="src" path="Busca_error"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

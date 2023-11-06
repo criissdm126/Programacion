@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="." destdir="C:\Users\alumno-215\Downloads" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="práscticas" source="18" sourcepath="src" splitindex="true" use="true" version="true">
+            <link href="file:/C:/Users/alumno-215/eclipse-workspace/Segundo_trimestre/doc/"/>
+        </javadoc>
+    </target>
+</project>

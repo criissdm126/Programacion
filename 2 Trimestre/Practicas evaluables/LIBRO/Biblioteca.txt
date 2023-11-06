@@ -1,0 +1,211 @@
+package Evaluable_Libro;
+import java.util.*;
+
+public class Biblioteca {
+
+	public static void main(String[] args) {
+		Persona p1 = new Persona ("Paco", "p1");
+		Persona p2 = new Persona ("Pape", "p2");	
+		Persona p3 = new Persona ("Maria", "p3");
+			
+		Libro libroArray[] = new Libro[4];
+		
+		menu(libroArray, p1, p2, p3);
+	}
+	public static void menu(Libro libroArray[], Persona p1, Persona p2, Persona p3) {
+		int respuesta =1;
+		Scanner sc = new Scanner (System.in);
+		while (respuesta !=0) {
+		System.out.println("Escoge una opcion");
+		System.out.println("1. Listado de libros en la biblioteca");
+		System.out.println("2. Nuevo libro");
+		System.out.println("3. Modificar un libro");
+		System.out.println("4. Prestar un libro");
+		System.out.println("5. Devolver un libro");
+		System.out.println("6. Comparar dos libros");
+		System.out.println("7. Borrar libro");
+		System.out.println("0. Salir");
+		respuesta =sc.nextInt();
+		
+		if (respuesta == 1) {
+			listado(libroArray);
+		}
+		else if (respuesta ==2) {
+			nuevo(libroArray);
+		}
+		else if (respuesta ==3) {
+			modificar(libroArray);
+		}
+		else if (respuesta ==4) {
+			prestarLibro(libroArray, p1, p2, p3);
+		}
+		else if (respuesta ==5) {
+			devolverLibro(libroArray, p1, p2, p3);
+		}
+		
+		else if (respuesta ==6) {
+			compararLibros(libroArray);	
+		}
+		else if (respuesta ==7) {
+			borrarLibro(libroArray);
+		}
+		else if (respuesta ==0){
+			System.out.println("Gracias por usar la biblioteca");
+		}
+		else {
+			System.out.println("Comando no valido");
+		}
+		}
+	}
+	
+	public static void listado(Libro[] libroArray) {
+		for (int i=0; i<libroArray.length; i++) {
+			System.out.println(libroArray[i].toString());
+		}
+	}
+	
+	public static Libro[] nuevo (Libro[] libroArray) {
+		Scanner select = new Scanner (System.in);
+		int contador = 0;
+		for (int i = 0; i < libroArray.length && contador != 1; i ++) {
+			if (libroArray[i] == null) {
+			System.out.println("Indica el codigo del libro");
+			int codigo =select.nextInt();
+			
+			System.out.println("Indica el titulo del libro ");
+			String titulo = select.next();
+			
+			System.out.println("Indica el autor del libro ");
+			String autor = select.next();
+			
+			libroArray[i] = new Libro(codigo, titulo, autor);
+			
+			System.out.println("Libro creado con exito");	
+		
+			contador++;	
+			}
+			else if (libroArray[libroArray.length - 1] != null){
+				System.out.println("Opreacion no valida, biblioteca a maxima capacidad");
+			contador++;	
+			}
+		}
+		select.close();
+		return libroArray;
+	}
+
+	
+	public static void modificar(Libro[] libroArray) {
+		Scanner select = new Scanner (System.in);
+		System.out.println("Codigo del libro a modificar: ");
+		int cod = select.nextInt();
+		
+		if (cod > libroArray.length-1 || cod < 0) {
+			System.err.println("Codigo no valido");
+		}
+		else if (libroArray[cod] == null) {
+			System.err.println("Codigo no valido");
+		}
+		else if (libroArray[cod] != null) {
+			System.out.println("Indica el nuevo titulo");
+			String titulo = select.next();
+			libroArray[cod].setTitulo(titulo);
+			System.out.println("Indica el nuevo autor");
+			String autor = select.next();
+			libroArray[cod].setAutor(autor);
+		}
+		select.close();
+	}
+
+
+	public static void prestarLibro(Libro[] libroArray, Persona p1, Persona p2, Persona p3)	{
+		Scanner select = new Scanner (System.in);
+		System.out.println("Indica el codigo del libro a prestar");
+		int cod = select.nextInt();
+		System.out.println("Indica la persona que va a tomar prestado este libro");
+		String cod_persona = select.next();
+		
+		if (cod > libroArray.length-1 || cod < 0) {
+			System.err.println("Codigo no valido");
+		}
+		else if (libroArray[cod] == null) {
+			System.err.println("Codigo no valido");
+		}
+		else if (libroArray[cod] != null) {
+		
+			if (cod_persona.compareToIgnoreCase(p1.codigo_persona) == 0) {
+			libroArray[cod].setPersona(p1);
+			libroArray[cod].prestamo();
+			
+			}
+			else if (cod_persona.compareToIgnoreCase(p2.codigo_persona) == 0) {
+			libroArray[cod].setPersona(p2);
+			libroArray[cod].prestamo();
+			}
+			else if (cod_persona.compareToIgnoreCase(p3.codigo_persona) == 0) {
+			libroArray[cod].setPersona(p3);
+			libroArray[cod].prestamo();
+			}
+			else System.err.println("Persona no valida");
+		}
+		select.close();
+		
+	}
+
+	
+	public static void devolverLibro(Libro[] libroArray, Persona p1, Persona p2, Persona p3)	{
+		Scanner select = new Scanner (System.in);
+		System.out.println("Codigo del libro a devolver:");
+		int cod = select.nextInt();
+		if (cod > libroArray.length-1 || cod < 0) {
+			System.err.println("Codigo no valido");
+		}
+		else if (libroArray[cod] == null) {
+			System.err.println("Codigo no valido");
+		}
+		else
+		libroArray[cod].devolucion();
+		select.close();
+	}
+	
+	
+	public static void compararLibros(Libro[] libroArray) {
+		Scanner select = new Scanner (System.in);
+		System.out.println("Indica el codigo del primer libro a comparar");
+		int cod1 = select.nextInt();
+		System.out.println("Ahora indica el codigo del segundo libro a comparar");
+		int cod2 = select.nextInt();
+	
+		if ((cod1 > libroArray.length-1 || cod1 < 0) || (cod1 > libroArray.length-1 || cod1 < 0) ) {
+			System.err.println("Codigo no valido");
+		}
+		
+		else if (libroArray[cod1] == null) {
+			System.err.println("Codigo no valido");
+		}
+		else if (libroArray[cod2] == null) {
+			System.err.println("Codigo no valido");
+		}
+		else libroArray[cod1].equals(libroArray[cod2]);
+		select.close();
+	}
+
+	
+	public static void borrarLibro (Libro[] libroArray) {
+		Scanner select = new Scanner (System.in);
+		System.out.println("Indica el codigo del libro que se va a borrar ");
+		int cod = select.nextInt();
+		
+		if (cod > libroArray.length-1 || cod < 0){
+			System.err.println("Codigo no valido");
+		}
+		else if (libroArray[cod] == null) {
+			System.err.println("Codigo no valido");
+		}
+		else if  (libroArray[cod].isDisponible() == false) {
+			System.err.println("Codigo no valido");
+		}
+		else libroArray[cod] = null;
+		select.close();
+	}
+
+}

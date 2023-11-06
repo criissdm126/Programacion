@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-18">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="Tema11_FicherosBinarios"/>
+	<classpathentry kind="src" path="Tema_9"/>
+	<classpathentry kind="src" path="Repaso_POO"/>
+	<classpathentry kind="src" path="Tema 10 - Ficheros y excepciones"/>
+	<classpathentry kind="src" path="Examenes_ficheros"/>
+	<classpathentry kind="src" path="Evaluables"/>
+	<classpathentry kind="src" path="Tema12_COLECCIONES"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

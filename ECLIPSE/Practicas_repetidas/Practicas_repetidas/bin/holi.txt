@@ -1,0 +1,121 @@
+// BORRAR FAMILIAR
+private static void borrarFamiliar(Socio socio, String dni) {
+    Familiar[] familiares = socio.getFamilia();
+
+    // Buscar el familiar por su DNI
+    int indice = -1;
+    for (int i = 0; i < familiares.length; i++) {
+        if (familiares[i].getDNI().equals(dni)) {
+            indice = i;
+            break;
+        }
+    }
+
+    // Si se encontró el familiar, eliminarlo del arreglo
+    if (indice != -1) {
+        Familiar[] nuevosFamiliares = new Familiar[familiares.length - 1];
+        int j = 0;
+        for (int i = 0; i < familiares.length; i++) {
+            if (i != indice) {
+                nuevosFamiliares[j] = familiares[i];
+                j++;
+            }
+        }
+        socio.setFamilia(nuevosFamiliares);
+        System.out.println("Familiar eliminado correctamente.");
+    } else {
+        System.out.println("No se encontró un familiar con ese DNI.");
+    }
+}
+
+ // MODIFICAR FAMILIAR
+ private static void modificarFamiliar(Socio socio, String dni) {
+    Familiar[] familiares = socio.getFamilia();
+
+    // Buscar el familiar por su DNI
+    int indice = -1;
+    for (int i = 0; i < familiares.length; i++) {
+        if (familiares[i].getDNI().equals(dni)) {
+            indice = i;
+            break;
+        }
+    }
+
+    // Si se encontró el familiar, solicitar los nuevos datos y actualizarlos
+    if (indice != -1) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese el nuevo nombre del familiar:");
+        String nombre = scanner.nextLine();
+        System.out.println("Ingrese el nuevo parentesco del familiar:");
+        String parentesco = scanner.nextLine();
+        
+        familiares[indice].setNombre(nombre);
+        familiares[indice].setParentesco(parentesco);
+
+        System.out.println("Datos del familiar actualizados correctamente.");
+    } else {
+        System.out.println("No se encontró un familiar con ese DNI.");
+    }
+}
+// ORDENAR POR FECHA
+/*
+package Ficheros;
+
+public class OrdenarporFecha implements Comparable<Socio> {
+
+    @Override
+    public int compareTo(Socio otro) {
+        if (this == null && otro == null) {
+            return 0;
+        } else if (this == null) {
+            return 1;
+        } else if (otro == null) { // Cambiado a -1 para manejar el caso de un objeto nulo
+            return -1;
+        } else {
+            return this.getFechaAlta().compareTo(otro.getFechaAlta());
+        }
+    }
+}
+*/
+
+*// ORDENAR POR NOMBRE INVERSA
+	/* @Override
+	    public int compare(Socio primero, Socio segundo) {
+		 
+	        if (primero == null && segundo == null) {
+	            return 0;
+	        }
+	        else if (primero == null) {
+	            return 1;
+	        }
+	        else if (segundo == null) {
+	            return -1;
+	        }
+	        else {
+	            return segundo.getNombre().compareToIgnoreCase(primero.getNombre()); // Invierte el orden de comparación
+	        }
+	    }
+}*/
+
+// POR EDAD COMPARABLE
+/*
+package Ficheros;
+
+public class FamiliaresPorEdad implements Comparable<Familiar> {
+
+    // Añado los distintos casos posibles de nulo para evitar errores
+
+    @Override
+    public int compareTo(Familiar otro) {
+        if (this == null && otro == null) {
+            return 0;
+        } else if (this == null) {
+            return 1;
+        } else if (otro == null) { // Cambiado a -1 para manejar el caso de un objeto nulo
+            return -1;
+        } else {
+            return this.getFfnacimiento().compareTo(otro.getFfnacimiento());
+        }
+    }
+}
+*/
